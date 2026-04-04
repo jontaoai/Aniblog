@@ -4,39 +4,29 @@ title = 'TAO AI未来'
 theme = 'PaperMod'
 
 [params]
-    defaultTheme = "auto" 
+    defaultTheme = "auto"
     showReadingTime = true
     displayFullContent = false
     ShowCodeCopyButtons = true
-    showToc = true # 自动开启文章目录，方便别人看长文章
+    showToc = true
 
-    # --- 观察者模式：让首页充满哲思 ---
+    # --- 观察者模式核心配置 ---
     [params.profileMode]
         enabled = true
         title = "TAO AI 未来"
         subtitle = "时代结构观察者。当 AI、算力与智能系统开始重写世界结构。有人讨论工具。有人讨论效率。这里记录的是：技术如何改变秩序，人类如何重新定位自己。不追热点。只观察结构。"
         displayFullDisp = true
-        # 建议换一个更干净的头像（比如纯黑背景的 AI 芯片或极简 Logo）
-        imageUrl = "https://github.com/github.png" 
+        imageUrl = "https://github.com/github.png"
 
-    # --- 导航菜单：让分类更清晰 ---
-    [[menu.main]]
-        identifier = "posts"
-        name = "观察档案" # 把“文章”改成“观察档案”，更有仪式感
-        url = "/posts/"
-        weight = 10
+# --- 导航菜单配置 ---
+[[menu.main]]
+    identifier = "posts"
+    name = "观察档案"
+    url = "/posts/"
+    weight = 10
 
-    [[menu.main]]
-        identifier = "categories"
-        name = "结构分类"
-        url = "/categories/"
-        weight = 20
-
-    # --- 社交链接 ---
-    [[params.socialIcons]]
-        name = "github"
-        url = "https://github.com/jon" # 换成你的 GitHub
-    
-    [[params.socialIcons]]
-        name = "rss"
-        url = "/index.xml"
+[[menu.main]]
+    identifier = "categories"
+    name = "结构分类"
+    url = "/categories/"
+    weight = 20
