@@ -1,0 +1,10 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'zh-cn'
+title = 'TAO AI未来'
+theme = 'PaperMod'
+
+[params]
+    defaultTheme = "auto" 
+    showReadingTime = true
+    displayFullContent = false
+    ShowCodeCopyButtons = true # 方便别人复制你的代码
