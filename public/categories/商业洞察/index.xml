@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>商业洞察 on TAO AI未来</title>
+    <link>http://localhost:1313/categories/%E5%95%86%E4%B8%9A%E6%B4%9E%E5%AF%9F/</link>
+    <description>Recent content in 商业洞察 on TAO AI未来</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 05 Apr 2026 12:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E5%95%86%E4%B8%9A%E6%B4%9E%E5%AF%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一人独角兽时代真的来了：AI 如何把「5 年团队 &#43; 融资」模式压缩成 2 个月</title>
+      <link>http://localhost:1313/posts/one-person-unicorn-ai/</link>
+      <pubDate>Sun, 05 Apr 2026 12:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/one-person-unicorn-ai/</guid>
+      <description>拆解 Medvi 兄弟如何利用 AI 在 2 个月内实现首年 4 亿美金收入。探讨 AI 如何替代传统岗位，降低创业门槛，开启个人独角兽时代。</description>
+    </item>
+  </channel>
+</rss>

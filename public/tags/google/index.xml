@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Google on TAO AI未来</title>
+    <link>http://localhost:1313/tags/google/</link>
+    <description>Recent content in Google on TAO AI未来</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 04 Apr 2026 23:30:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google 突然发布 Gemma 4：全系列开源，本地直跑，256K上下文，商业免费用</title>
+      <link>http://localhost:1313/posts/gemma-4/</link>
+      <pubDate>Sat, 04 Apr 2026 23:30:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/gemma-4/</guid>
+      <description>Google 突袭发布 Gemma 4，包含 E2B 到 31B 四个尺寸，支持 256K 超长上下文和原生函数调用。本文为你拆解模型选型与部署攻略。</description>
+    </item>
+  </channel>
+</rss>

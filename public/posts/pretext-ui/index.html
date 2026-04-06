@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>AI 开始自己生成UI界面，一个华人工程师补上了最关键的那块拼图 | TAO AI未来</title>
+<meta name="keywords" content="AI, Generative UI, Pretext, 前端开发">
+<meta name="description" content="探讨华人工程师 Cheng Lou 的 Pretext 库如何解决 AI 生成式 UI 的性能瓶颈。">
+<meta name="author" content="Jon">
+<link rel="canonical" href="http://localhost:1313/posts/pretext-ui/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/pretext-ui/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="TAO AI未来 (Alt + H)">TAO AI未来</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/posts/" title="观察档案">
+                    <span>观察档案</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/" title="结构分类">
+                    <span>结构分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/store/" title="资源商店">
+                    <span>资源商店</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      AI 开始自己生成UI界面，一个华人工程师补上了最关键的那块拼图
+    </h1>
+    <div class="post-description">
+      探讨华人工程师 Cheng Lou 的 Pretext 库如何解决 AI 生成式 UI 的性能瓶颈。
+    </div>
+    <div class="post-meta"><span title='2026-04-04 22:30:00 +0800 +0800'>April 4, 2026</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Jon</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e4%b8%80ai-%e4%b8%8d%e5%86%8d%e5%8f%aa%e7%94%9f%e6%88%90%e5%86%85%e5%ae%b9%e5%ae%83%e5%bc%80%e5%a7%8b%e7%9b%b4%e6%8e%a5%e7%94%9f%e6%88%90%e7%95%8c%e9%9d%a2" aria-label="一、AI 不再只生成内容，它开始直接生成&quot;界面&quot;">一、AI 不再只生成内容，它开始直接生成&quot;界面&quot;</a></li>
+                <li>
+                    <a href="#%e4%ba%8c%e7%bd%91%e9%a1%b5%e5%b8%83%e5%b1%80%e7%b3%bb%e7%bb%9f%e7%94%9f%e4%ba%8e%e9%9d%99%e6%80%81%e6%97%b6%e4%bb%a3%e6%ad%bb%e4%ba%8e%e5%8a%a8%e6%80%81%e6%97%b6%e4%bb%a3" aria-label="二、网页布局系统，生于静态时代，死于动态时代">二、网页布局系统，生于静态时代，死于动态时代</a></li>
+                <li>
+                    <a href="#%e4%b8%89pretext-%e8%a1%a5%e4%b8%8a%e7%9a%84%e7%bb%93%e6%9e%84%e7%bc%ba%e5%8f%a3%e6%8a%8a%e6%96%87%e6%9c%ac%e6%8e%92%e7%89%88%e4%bb%8e%e6%b5%8f%e8%a7%88%e5%99%a8%e8%a7%a3%e6%94%be%e5%87%ba%e6%9d%a5" aria-label="三、Pretext 补上的结构缺口：把文本排版从浏览器&quot;解放&quot;出来">三、Pretext 补上的结构缺口：把文本排版从浏览器&quot;解放&quot;出来</a></li>
+                <li>
+                    <a href="#%e5%9b%9b%e4%b8%ba%e4%bb%80%e4%b9%88%e8%af%b4-pretext-%e6%98%afai-%e7%94%9f%e6%88%90%e5%bc%8f-ui%e7%9a%84%e5%9f%ba%e7%a1%80%e8%ae%be%e6%96%bd" aria-label="四、为什么说 Pretext 是&quot;AI 生成式 UI&quot;的基础设施？">四、为什么说 Pretext 是&quot;AI 生成式 UI&quot;的基础设施？</a></li>
+                <li>
+                    <a href="#%e4%ba%94%e4%b8%80%e4%b8%aa%e5%bc%ba%e7%83%88%e4%bf%a1%e5%8f%b7%e5%bc%80%e5%8f%91%e8%80%85%e4%bb%ac%e7%9c%8b%e5%88%b0%e4%ba%86%e6%9b%b4%e8%bf%9c%e7%9a%84%e6%9c%aa%e6%9d%a5" aria-label="五、一个强烈信号：开发者们看到了更远的未来">五、一个强烈信号：开发者们看到了更远的未来</a></li>
+                <li>
+                    <a href="#%e5%85%ad%e4%ba%ba%e7%9a%84%e4%bd%8d%e7%bd%ae%e7%9c%9f%e6%ad%a3%e6%8e%a8%e5%8a%a8%e6%97%b6%e4%bb%a3%e5%8f%98%e5%8c%96%e7%9a%84%e5%be%80%e5%be%80%e6%98%af%e4%b8%8d%e8%b5%b7%e7%9c%bc%e7%9a%84%e5%9f%ba%e7%a1%80%e6%8b%bc%e5%9b%be" aria-label="六、人的位置：真正推动时代变化的，往往是&quot;不起眼的基础拼图&rdquo;">六、人的位置：真正推动时代变化的，往往是&quot;不起眼的基础拼图&rdquo;</a></li>
+                <li>
+                    <a href="#%e7%bb%93%e5%b0%be" aria-label="结尾">结尾</a></li>
+                <li>
+                    <a href="#%e7%9b%b8%e5%85%b3%e8%b5%84%e6%96%99" aria-label="相关资料">相关资料</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>最近，前端开发者圈和 AI 产品圈同时炸了锅。</p>
+<p>一个只有几 KB 的纯 TypeScript 库——<strong>Pretext</strong>，突然在技术社区广受关注。作者是华人工程师 <strong>Cheng Lou</strong>，他曾深度参与 React 核心开发，后来主导 ReasonML / ReScript，还在 Midjourney 负责前端工程。</p>
+<p>但真正让开发者们惊叹的，不是代码量小，也不是作者背景亮眼。</p>
+<p>而是一个长期被忽略的事实：</p>
+<blockquote>
+<p>网页上的文本排版，竟然一直是 UI 性能的最大隐形瓶颈之一。</p>
+</blockquote>
+<p>而在 AI 疯狂生成内容的时代，这个瓶颈正在被无限放大。</p>
+<hr>
+<h2 id="一ai-不再只生成内容它开始直接生成界面">一、AI 不再只生成内容，它开始直接生成&quot;界面&quot;<a hidden class="anchor" aria-hidden="true" href="#一ai-不再只生成内容它开始直接生成界面">#</a></h2>
+<p>过去一年，最显著的变化不是模型参数变大，而是 AI 的输出边界在快速外扩。</p>
+<p>它不再满足于吐出一段文本、一张图片或一段视频。它开始生成完整的界面：</p>
+<p>· AI 一键生成网页原型<br>
+· AI 实时绘制应用 UI<br>
+· AI 动态构建聊天界面<br>
+· AI 根据用户意图自动排布设计稿<br>
+· AI 驱动的无限滚动、个性化布局……</p>
+<p>ChatGPT 的新界面、Cursor 的代码编辑体验、Vercel v0、Figma AI……这些产品已经让我们提前尝到了&quot;<strong>生成式界面（Generative UI）</strong>&ldquo;的味道。</p>
+<p>但问题很快就暴露出来：</p>
+<p><strong>AI 可以瞬间生成海量内容，却很难让界面实时、流畅地响应这些内容的变化。</strong></p>
+<p>为什么？因为我们用来承载界面的底层架构，还是 20 多年前为&quot;静态文档&quot;设计的。</p>
+<hr>
+<h2 id="二网页布局系统生于静态时代死于动态时代">二、网页布局系统，生于静态时代，死于动态时代<a hidden class="anchor" aria-hidden="true" href="#二网页布局系统生于静态时代死于动态时代">#</a></h2>
+<p>今天的绝大多数网页，依然依赖经典的 CSS + DOM 组合。</p>
+<p>想知道一段文字到底多高、多宽、该怎么换行？浏览器通常的做法是：</p>
+<p>① 把文字塞进 DOM<br>
+② 触发布局计算<br>
+③ 返回测量结果</p>
+<p>这个过程会引发浏览器最昂贵的一种操作——<strong>Reflow（重排）</strong>。一次重排，可能需要重新计算整个页面的所有元素位置。</p>
+<p>在静态时代，这没太大问题：文章写完就固定，人手动调排版，内容很少实时变化。</p>
+<p><strong>但 AI 时代彻底不同了。</strong></p>
+<p>页面不再是死的，它可能每秒都在变：</p>
+<p>· AI 实时生成新文本<br>
+· AI 动态改写段落长度<br>
+· AI 自动调整整体布局<br>
+· AI 产生无限滚动的内容流</p>
+<p>每一次变化，都可能触发成百上千次重排。性能雪崩，就这样悄无声息地发生了。</p>
+<p>技术社区里有开发者直言：</p>
+<blockquote>
+<p>&ldquo;CSS 是为 1996 年的文档设计的，不是为 2026 年的 AI 界面设计的。&rdquo;</p>
+</blockquote>
+<hr>
+<h2 id="三pretext-补上的结构缺口把文本排版从浏览器解放出来">三、Pretext 补上的结构缺口：把文本排版从浏览器&quot;解放&quot;出来<a hidden class="anchor" aria-hidden="true" href="#三pretext-补上的结构缺口把文本排版从浏览器解放出来">#</a></h2>
+<p>Cheng Lou 做的，是一件看似简单、实则颠覆性的事情。</p>
+<p><strong>他把文本排版计算从浏览器 DOM 里彻底拿了出来。</strong></p>
+<p>传统方式：DOM 插入 → 浏览器测量 → Reflow → 布局</p>
+<p>Pretext 方式：字体引擎（Canvas）→ 纯 JS 算术计算 → 精准返回布局信息</p>
+<p>开发者现在可以在用户端瞬间计算：</p>
+<p>· 任意形状的文本绕排（文字绕着图片、三角形、曲线流动）<br>
+· 段落精确高度<br>
+· 文字包围盒<br>
+· 复杂富文本布局</p>
+<p>完全不需要触发一次浏览器重排。实测数据显示：速度提升可达 <strong>500 倍</strong>以上。</p>
+<p>【在此插入视频1：EsotericCofe《辉夜大小姐》千花跳舞 demo】</p>
+<p>技术社区里，一个超高能的动画演示迅速传播：用《辉夜大小姐想让我告白》里千花跳舞的场景作为文字背景，日文歌词实时、流畅地围绕着舞动的角色自动换行和环绕。文字像水一样跟着动画变形，却始终保持完美的排版和可读性。</p>
+<p>整个视频约 1 分钟，看起来像魔法——文字不再是死板的方块，而是能智能适应复杂视觉元素的&quot;活物&rdquo;。这直接展示了 Pretext 在创意、非传统排版场景下的强大能力：实时计算文本包围盒、断行、环绕等，而不卡顿。</p>
+<p>【在此插入视频2：Riyvir 中世纪手抄本小龙互动 demo】</p>
+<p>另一个令人惊叹的演示，则把 Pretext 的潜力推向了艺术与趣味的极致：一个中世纪手抄本风格的交互式页面，里面有一条可爱的小龙在吐火、追逐光标，还能&quot;点亮&quot;流动的哥特式花体文字。页面像古书一样翻动，整体充满沉浸感和灵魂。</p>
+<p>鼠标移动时，小龙会兴奋地追逐、吐火照亮文字；静止时它又安静下来，让你好好阅读。文字像古老羊皮纸上的哥特体，却能实时响应动态元素，丝滑无比。</p>
+<p>不少开发者看完后直呼：&ldquo;太酷了！&ldquo;&ldquo;网页终于又变得有趣了。&ldquo;&ldquo;这已经不是单纯的排版工具，而是在让互联网重新拥有灵魂。&rdquo;</p>
+<p>这些演示不是炫技，而是最直观的证明：<strong>Pretext 让网页可以像杂志、像艺术品、像会呼吸的活物一样排版，却依然保持 Web 的动态性和高性能。</strong></p>
+<hr>
+<h2 id="四为什么说-pretext-是ai-生成式-ui的基础设施">四、为什么说 Pretext 是&quot;AI 生成式 UI&quot;的基础设施？<a hidden class="anchor" aria-hidden="true" href="#四为什么说-pretext-是ai-生成式-ui的基础设施">#</a></h2>
+<p>把 AI 产品拆开看，其实有三层结构：</p>
+<p><strong>第一层</strong>：底层模型（GPT、Claude、Gemini……）<br>
+<strong>第二层</strong>：生成系统<br>
+<strong>第三层</strong>：界面呈现</p>
+<p>过去一年，大家几乎把所有目光都放在了第一层。但真正决定 AI 产品体验上限的，往往是后两层——尤其是生成式界面。</p>
+<p>未来的很多应用，界面将不再是工程师预先设计好的固定模板，而是 AI 根据实时任务、用户上下文、生成的内容，动态拼装出来的：临时图表、个性化表格、对话气泡、复杂多栏布局……</p>
+<p>这时候，界面必须能瞬间重新排版、精确测量、丝滑响应。</p>
+<p><strong>Pretext 解决的，正是这个底层结构问题：文本布局的实时计算。</strong></p>
+<p>它让&quot;AI 生成内容 + AI 生成布局 + 实时呈现&quot;成为可能。</p>
+<hr>
+<h2 id="五一个强烈信号开发者们看到了更远的未来">五、一个强烈信号：开发者们看到了更远的未来<a hidden class="anchor" aria-hidden="true" href="#五一个强烈信号开发者们看到了更远的未来">#</a></h2>
+<p>很多人在体验完这些 demo 后，留下了类似的话：</p>
+<blockquote>
+<p>&ldquo;网页终于又变得有趣了。&rdquo;</p>
+</blockquote>
+<p>他们看到的不是一个单纯的排版库，而是一种可能性——网页不再局限于卡片、列表、瀑布流这些工业化模板，它可以重新变成：</p>
+<p>· 文字绕图流动的杂志感界面<br>
+· 随内容实时变形的动态排版<br>
+· 跟随动画呼吸的有机布局</p>
+<p>如果 AI 能生成内容、生成逻辑、生成交互，那么 <strong>UI 本身也可能彻底变成实时生成的</strong>。</p>
+<p>技术社区里有声音认为：&ldquo;这不是在优化前端，而是在重新定义前端能做什么。&rdquo;</p>
+<hr>
+<h2 id="六人的位置真正推动时代变化的往往是不起眼的基础拼图">六、人的位置：真正推动时代变化的，往往是&quot;不起眼的基础拼图&rdquo;<a hidden class="anchor" aria-hidden="true" href="#六人的位置真正推动时代变化的往往是不起眼的基础拼图">#</a></h2>
+<p>AI 时代有一个常被忽略的事实：很多决定性变革，并非来自最炫酷的模型，而是来自默默补齐结构缺口的基础工具层。</p>
+<p>React 改变了前端开发范式，Docker 改变了软件交付方式，CUDA 改变了 AI 训练效率。这些东西本身不是终极产品，却<strong>定义了未来产品能达到的高度</strong>。</p>
+<p>Pretext 也是如此。它只是一个几 KB 的小库，作者却花了巨大精力实现浏览器级精度的纯 JS 文本引擎。但它补上的，正是生成式 UI 时代缺失的一块关键拼图。</p>
+<p>人的位置在这里显现：AI 提供了生成的能力，而真正让这种能力落地的，依然是像 Cheng Lou 这样，对结构有深刻洞察、对痛点有极致执着的工程师。他们用工具、用经验、甚至用 AI 作为协作者，一点点把未来的架构拼出来。</p>
+<hr>
+<h2 id="结尾">结尾<a hidden class="anchor" aria-hidden="true" href="#结尾">#</a></h2>
+<p>AI 时代的技术演进，往往不是一场爆炸式的革命，而是一块拼图接着一块拼图，缓慢却不可逆转地拼凑而成。</p>
+<p>Pretext 只是其中不起眼的一块。但如果未来网页真的全面进入&quot;AI 实时生成界面&quot;的时代，那么今天这个小库，很可能就是其中一个安静却重要的起点。</p>
+<p>当 AI 能自己&quot;写&quot;界面时，我们需要的，不再只是更聪明的模型，而是更聪明的结构。</p>
+<p><strong>而结构，永远由人来定义。</strong></p>
+<hr>
+<h2 id="相关资料">相关资料<a hidden class="anchor" aria-hidden="true" href="#相关资料">#</a></h2>
+<p>· Pretext 官方 GitHub：https://github.com/chenglou/pretext</p>
+<p>· 中世纪手抄本小龙互动演示：https://illustrated-manuscript.vercel.app/<br>
+（建议在桌面端体验，用鼠标逗逗那条会吐火的小龙，感受实时动态排版的魅力）</p>
+<p>· 更多 Pretext 演示与文档：可在 GitHub 仓库中查看作者提供的示例与 API 说明。</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/ai/">AI</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/">前端</a></li>
+      <li><a href="http://localhost:1313/tags/%E6%8A%80%E6%9C%AF%E8%B6%8B%E5%8A%BF/">技术趋势</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">TAO AI未来</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

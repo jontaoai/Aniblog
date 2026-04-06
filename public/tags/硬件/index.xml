@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>硬件 on TAO AI未来</title>
+    <link>http://localhost:1313/tags/%E7%A1%AC%E4%BB%B6/</link>
+    <description>Recent content in 硬件 on TAO AI未来</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 05 Apr 2026 11:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%A1%AC%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>不是你的算力，就不是你的思维：拆解 Vitalik 的全本地隐私 AI 配置</title>
+      <link>http://localhost:1313/posts/vitalik-local-ai-privacy/</link>
+      <pubDate>Sun, 05 Apr 2026 11:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/vitalik-local-ai-privacy/</guid>
+      <description>深度解析以太坊创始人 Vitalik 2026 年最新的本地 AI 系统：从硬件选型到 NixOS &#43; Bubblewrap 的安全架构，看顶级极客如何守护数字主权。</description>
+    </item>
+  </channel>
+</rss>

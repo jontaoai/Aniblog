@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>硬件加速 on TAO AI未来</title>
+    <link>http://localhost:1313/tags/%E7%A1%AC%E4%BB%B6%E5%8A%A0%E9%80%9F/</link>
+    <description>Recent content in 硬件加速 on TAO AI未来</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 05 Apr 2026 15:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%A1%AC%E4%BB%B6%E5%8A%A0%E9%80%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>本地 AI 正在起飞：深度解析 1.15GB 的商用级 1-bit 大模型 Bonsai-8B</title>
+      <link>http://localhost:1313/posts/bonsai-8b-1bit-ai-breakthrough/</link>
+      <pubDate>Sun, 05 Apr 2026 15:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/bonsai-8b-1bit-ai-breakthrough/</guid>
+      <description>体积缩小 14 倍，速度提升 8 倍。拆解全球首个商用级 1-bit 大模型 Bonsai 系列，探讨端到端 1-bit 权重如何开启 AI 的‘晶体管时刻’。</description>
+    </item>
+  </channel>
+</rss>

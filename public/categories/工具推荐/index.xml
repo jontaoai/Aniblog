@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>工具推荐 on TAO AI未来</title>
+    <link>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/</link>
+    <description>Recent content in 工具推荐 on TAO AI未来</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 05 Apr 2026 09:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown：AI 时代人人必学的「通用写作语言」</title>
+      <link>http://localhost:1313/posts/markdown-ai-guide/</link>
+      <pubDate>Sun, 05 Apr 2026 09:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/markdown-ai-guide/</guid>
+      <description>为什么 Markdown 是 AI 时代的‘国王语言’？本文带你 10 分钟快速掌握 Markdown 核心语法，提升与 AI 协作的生产力。</description>
+    </item>
+  </channel>
+</rss>

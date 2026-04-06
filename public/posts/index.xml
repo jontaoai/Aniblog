@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on TAO AI未来</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on TAO AI未来</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 05 Apr 2026 16:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>诺贝尔得主休伊特：AI 不是在消灭工作，它在重写一条更古老的规则</title>
+      <link>http://localhost:1313/posts/howitt-ai-creative-destruction/</link>
+      <pubDate>Sun, 05 Apr 2026 16:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/howitt-ai-creative-destruction/</guid>
+      <description>深度解析 2025 年诺贝尔得主彼得·休伊特的观点：为什么 AI 带来的‘创造性破坏’与以往不同？普通人如何跨越技术替代的‘统计黑洞’？</description>
+    </item>
+    <item>
+      <title>本地 AI 正在起飞：深度解析 1.15GB 的商用级 1-bit 大模型 Bonsai-8B</title>
+      <link>http://localhost:1313/posts/bonsai-8b-1bit-ai-breakthrough/</link>
+      <pubDate>Sun, 05 Apr 2026 15:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/bonsai-8b-1bit-ai-breakthrough/</guid>
+      <description>体积缩小 14 倍，速度提升 8 倍。拆解全球首个商用级 1-bit 大模型 Bonsai 系列，探讨端到端 1-bit 权重如何开启 AI 的‘晶体管时刻’。</description>
+    </item>
+    <item>
+      <title>你的团队准备好让 AI「自己把事做完」了吗？Agentic 工作流深度实战拆解</title>
+      <link>http://localhost:1313/posts/ai-agent-workflow-business-guide/</link>
+      <pubDate>Sun, 05 Apr 2026 14:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/ai-agent-workflow-business-guide/</guid>
+      <description>不讲技术堆砌，直击业务本质。通过电商备货、跨境客服、营销生产等 5 大真实场景，拆解 AI Agent 如何从「对话框」进化为「自动执行的项目经理」。</description>
+    </item>
+    <item>
+      <title>一人独角兽时代真的来了：AI 如何把「5 年团队 &#43; 融资」模式压缩成 2 个月</title>
+      <link>http://localhost:1313/posts/one-person-unicorn-ai/</link>
+      <pubDate>Sun, 05 Apr 2026 12:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/one-person-unicorn-ai/</guid>
+      <description>拆解 Medvi 兄弟如何利用 AI 在 2 个月内实现首年 4 亿美金收入。探讨 AI 如何替代传统岗位，降低创业门槛，开启个人独角兽时代。</description>
+    </item>
+    <item>
+      <title>不是你的算力，就不是你的思维：拆解 Vitalik 的全本地隐私 AI 配置</title>
+      <link>http://localhost:1313/posts/vitalik-local-ai-privacy/</link>
+      <pubDate>Sun, 05 Apr 2026 11:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/vitalik-local-ai-privacy/</guid>
+      <description>深度解析以太坊创始人 Vitalik 2026 年最新的本地 AI 系统：从硬件选型到 NixOS &#43; Bubblewrap 的安全架构，看顶级极客如何守护数字主权。</description>
+    </item>
+    <item>
+      <title>OpenClaw v2026.3.22 深度解析：AI Agent 从「工具」向「平台」的质变</title>
+      <link>http://localhost:1313/posts/openclaw-v2026-3-22-platform/</link>
+      <pubDate>Sun, 05 Apr 2026 10:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/openclaw-v2026-3-22-platform/</guid>
+      <description>深度拆解 OpenClaw v2026.3.22 重要更新：ClawHub 插件市场上线、多模型分工架构、以及 SSH 沙箱能力的引入。</description>
+    </item>
+    <item>
+      <title>Markdown：AI 时代人人必学的「通用写作语言」</title>
+      <link>http://localhost:1313/posts/markdown-ai-guide/</link>
+      <pubDate>Sun, 05 Apr 2026 09:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/markdown-ai-guide/</guid>
+      <description>为什么 Markdown 是 AI 时代的‘国王语言’？本文带你 10 分钟快速掌握 Markdown 核心语法，提升与 AI 协作的生产力。</description>
+    </item>
+    <item>
+      <title>Google 突然发布 Gemma 4：全系列开源，本地直跑，256K上下文，商业免费用</title>
+      <link>http://localhost:1313/posts/gemma-4/</link>
+      <pubDate>Sat, 04 Apr 2026 23:30:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/gemma-4/</guid>
+      <description>Google 突袭发布 Gemma 4，包含 E2B 到 31B 四个尺寸，支持 256K 超长上下文和原生函数调用。本文为你拆解模型选型与部署攻略。</description>
+    </item>
+    <item>
+      <title>Bonsai-8B 新人本地部署指南：在 Apple Silicon Mac 上玩转 1-bit 量化大模型</title>
+      <link>http://localhost:1313/posts/bonsai-deploy/</link>
+      <pubDate>Sat, 04 Apr 2026 23:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/bonsai-deploy/</guid>
+      <description>手把手教你如何在 M1/M2/M3/M4 芯片的 Mac 上使用 MLX 框架部署 Bonsai-8B 模型，包含 1-bit 高性能量化版配置。</description>
+    </item>
+    <item>
+      <title>AI 开始自己生成UI界面，一个华人工程师补上了最关键的那块拼图</title>
+      <link>http://localhost:1313/posts/pretext-ui/</link>
+      <pubDate>Sat, 04 Apr 2026 22:30:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/pretext-ui/</guid>
+      <description>探讨华人工程师 Cheng Lou 的 Pretext 库如何解决 AI 生成式 UI 的性能瓶颈。</description>
+    </item>
+  </channel>
+</rss>

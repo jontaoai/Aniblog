@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>教程 on TAO AI未来</title>
+    <link>http://localhost:1313/tags/%E6%95%99%E7%A8%8B/</link>
+    <description>Recent content in 教程 on TAO AI未来</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 06 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Apple Silicon Mac 本地运行 Bonsai-8B 完整教程</title>
+      <link>http://localhost:1313/store/bonsai-8b-guide/</link>
+      <pubDate>Sat, 06 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/store/bonsai-8b-guide/</guid>
+      <description>手把手教你用 PrismML 的 MLX fork 在 Mac 上跑 1-bit 量化模型，无需云端，完全本地运行</description>
+    </item>
+  </channel>
+</rss>

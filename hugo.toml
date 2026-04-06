@@ -30,3 +30,8 @@ theme = 'PaperMod'
     name = "结构分类"
     url = "/categories/"
     weight = 20
+[[menu.main]]
+    identifier = "store"
+    name = "资源商店"
+    url = "/store/"
+    weight = 30

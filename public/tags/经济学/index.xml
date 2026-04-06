@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>经济学 on TAO AI未来</title>
+    <link>http://localhost:1313/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/</link>
+    <description>Recent content in 经济学 on TAO AI未来</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 05 Apr 2026 16:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>诺贝尔得主休伊特：AI 不是在消灭工作，它在重写一条更古老的规则</title>
+      <link>http://localhost:1313/posts/howitt-ai-creative-destruction/</link>
+      <pubDate>Sun, 05 Apr 2026 16:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/howitt-ai-creative-destruction/</guid>
+      <description>深度解析 2025 年诺贝尔得主彼得·休伊特的观点：为什么 AI 带来的‘创造性破坏’与以往不同？普通人如何跨越技术替代的‘统计黑洞’？</description>
+    </item>
+  </channel>
+</rss>

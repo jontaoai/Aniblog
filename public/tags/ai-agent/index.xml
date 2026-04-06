@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AI Agent on TAO AI未来</title>
+    <link>http://localhost:1313/tags/ai-agent/</link>
+    <description>Recent content in AI Agent on TAO AI未来</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 05 Apr 2026 14:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ai-agent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>你的团队准备好让 AI「自己把事做完」了吗？Agentic 工作流深度实战拆解</title>
+      <link>http://localhost:1313/posts/ai-agent-workflow-business-guide/</link>
+      <pubDate>Sun, 05 Apr 2026 14:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/ai-agent-workflow-business-guide/</guid>
+      <description>不讲技术堆砌，直击业务本质。通过电商备货、跨境客服、营销生产等 5 大真实场景，拆解 AI Agent 如何从「对话框」进化为「自动执行的项目经理」。</description>
+    </item>
+    <item>
+      <title>OpenClaw v2026.3.22 深度解析：AI Agent 从「工具」向「平台」的质变</title>
+      <link>http://localhost:1313/posts/openclaw-v2026-3-22-platform/</link>
+      <pubDate>Sun, 05 Apr 2026 10:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/openclaw-v2026-3-22-platform/</guid>
+      <description>深度拆解 OpenClaw v2026.3.22 重要更新：ClawHub 插件市场上线、多模型分工架构、以及 SSH 沙箱能力的引入。</description>
+    </item>
+  </channel>
+</rss>

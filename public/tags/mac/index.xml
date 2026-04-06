@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mac on TAO AI未来</title>
+    <link>http://localhost:1313/tags/mac/</link>
+    <description>Recent content in Mac on TAO AI未来</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 04 Apr 2026 23:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bonsai-8B 新人本地部署指南：在 Apple Silicon Mac 上玩转 1-bit 量化大模型</title>
+      <link>http://localhost:1313/posts/bonsai-deploy/</link>
+      <pubDate>Sat, 04 Apr 2026 23:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/bonsai-deploy/</guid>
+      <description>手把手教你如何在 M1/M2/M3/M4 芯片的 Mac 上使用 MLX 框架部署 Bonsai-8B 模型，包含 1-bit 高性能量化版配置。</description>
+    </item>
+  </channel>
+</rss>
